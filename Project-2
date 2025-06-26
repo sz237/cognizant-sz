@@ -1,0 +1,18 @@
+# Project 2: Number Guessing Game
+import random
+number_to_guess = random.randint(1, 100)
+
+guess = int(input("Guess the number:"))
+num = 1
+
+while (guess != number_to_guess):
+    if (guess > number_to_guess):
+        print("Too high! Try again.")
+        guess = int(input("Guess the number:"))
+    elif (guess < number_to_guess):
+        print("Too low! Try again.")
+        guess = int(input("Guess the number:"))
+
+    num += 1
+
+print("Congratulations! You guessed it in", num, "attempts!")
